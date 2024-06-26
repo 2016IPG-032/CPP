@@ -41,4 +41,41 @@ int main() {
     return 0;
 }
 
+/* Adding two complex number*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+class Complex{
+
+    int real,img;
+
+    public:
+    Complex(int r=0,int img=0): real{r},img{img}{};
+   
+   Complex operator+(Complex const &tmp)
+   {
+        Complex c;
+        c.real=real+tmp.real;
+        c.img=img+tmp.img;
+        return c;
+   }
+   void print()
+   {
+    cout<<real<<"+i"<<img<<endl;
+   }
+
+};
+
+int main() {
+    Complex c1(3,4),c2(4,5);
+    Complex c3=c1+c2;
+
+    c3.print();
+    
+   
+    return 0;
+}
+
 
